@@ -1,5 +1,7 @@
+
 generator client {
   provider = "prisma-client-js"
+  output   = "./generated/client"
 }
 
 datasource db {
@@ -7,39 +9,10 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-//* ---------------Enums----------------- *//
-//! UserRole Enum
-enum UserRole {
-  SUPER_ADMIN
-  ADMIN
-  DOCTOR
-  PATIENT
-}
 
-//! Status Enum
-enum UserStatus {
-  ACTIVE
-  BLOCKED
-  DELETED
+model User {
+  id        String   @id @default(uuid())
+  email     String   @unique
+  name      String?
+  createdAt DateTime @default(now())
 }
-
-//! gender Enum
-enum UserGender {
-  MALE
-  FEMALE
-  OTHER
-}
-
-//! Blood Group Enum
-enum BloodGroup {
-  A_POSITIVE
-  A_NEGATIVE
-  B_POSITIVE
-  B_NEGATIVE
-  O_POSITIVE
-  O_NEGATIVE
-  AB_POSITIVE
-  AB_NEGATIVE
-}
-
-//* ---------------Models----------------- *//
