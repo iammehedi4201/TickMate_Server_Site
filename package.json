@@ -14,8 +14,7 @@
     "prisma:studio": "prisma studio",
     "type-check": "tsc --noEmit",
     "clean": "rm -rf dist node_modules && npm install",
-    "test": "echo \"Add tests here\" && exit 0",
-    "prepare": "husky install"
+    "test": "echo \"Add tests here\" && exit 0"
   },
   "keywords": [],
   "author": "",
@@ -27,7 +26,6 @@
     "@types/express": "^5.0.1",
     "@types/node": "^22.14.1",
     "@types/nodemailer": "^6.4.17",
-    "husky": "^9.1.7",
     "prisma": "^6.6.0",
     "ts-node": "^10.9.2",
     "typescript": "^5.8.3"
