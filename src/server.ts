@@ -9,7 +9,7 @@ let server: Server;
 async function main() {
   try {
     server = app.listen(PORT, () => {
-      console.log(`Server is running on port ${PORT}`);
+      console.log(`Server is running on port sdd ${PORT}`);
     });
   } catch (error: any) {
     console.log(error.message);
